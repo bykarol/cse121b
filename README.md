@@ -1,2 +1,4 @@
-# Javascript Course (CSE 121B)
-### Deploy 👉🏻 [https://bykarol.github.io/cse121b/](https://bykarol.github.io/cse121b/)
+## Javascript Course (CSE 121B)
+
+- Deploy 👉🏻 <a href="https://bykarol.github.io/cse121b/" target="_blank">Home Page</a>
+

@@ -5,7 +5,7 @@
 /* Step 2 - Variables */
 let fullName = "Karol Bracho";
 let currentYear = new Date().getFullYear();
-let profilePicture = "../images/me.jpg";
+let profilePicture = "images/me.jpg";
 
 /* Step 3 - Element Variables */
 const nameElement = document.getElementById("name");

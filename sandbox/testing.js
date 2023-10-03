@@ -1,20 +1,20 @@
-/* PRACTICING METHODS */
-const array = ['one', 'two', 'three']
-const htmlStringArray = array.map((element)=> `<li>${element}</li>`)
-// document.querySelector("#myList").innerHTML = htmlStringArray.join("");
+// /* PRACTICING METHODS */
+// const array = ['one', 'two', 'three']
+// const htmlStringArray = array.map((element)=> `<li>${element}</li>`)
+// // document.querySelector("#myList").innerHTML = htmlStringArray.join("");
 
-const array2 = ['A', 'B', 'A']
-const gradesToGPA = array2.map((element)=> element.toLowerCase() === "a" ? 4 : 3)
-// document.querySelector("#myList").innerHTML = gradesToGPA;
+// const array2 = ['A', 'B', 'A']
+// const gradesToGPA = array2.map((element)=> element.toLowerCase() === "a" ? 4 : 3)
+// // document.querySelector("#myList").innerHTML = gradesToGPA;
 
-const avgGPA = gradesToGPA.reduce((acc, currentValue)=> acc + currentValue / gradesToGPA.length, 0)
-document.querySelector("#myList").innerHTML = avgGPA;
+// const avgGPA = gradesToGPA.reduce((acc, currentValue)=> acc + currentValue / gradesToGPA.length, 0)
+// document.querySelector("#myList").innerHTML = avgGPA;
 
-// INDEXOF METHOD
-const myArray = [12, 34, 21, 54];
-const luckyNumber = 21;
-let luckyIndex = myArray.indexOf(luckyNumber);
-//expected output: 2 <= the luckynum is in the index 2
+// // INDEXOF METHOD
+// const myArray = [12, 34, 21, 54];
+// const luckyNumber = 21;
+// let luckyIndex = myArray.indexOf(luckyNumber);
+// //expected output: 2 <= the luckynum is in the index 2
 
 /* ARRAY METHODS FILTER, MAP, REDUCE */
 // // filter()

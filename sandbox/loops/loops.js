@@ -55,3 +55,42 @@ document.querySelector("#places-lived").innerHTML = generateListMarkup(
   myInfo.placesLived,
   placeTemplate
 );
+
+// Testing loops
+const DAYS = 6;
+const LIMIT = 30;
+let studentReport = [11, 42, 33, 64, 29, 37, 44, 9];
+
+console.log("For loop");
+for (let i = 0; i < studentReport.length; i++) {
+  if (studentReport[i] < LIMIT){
+    console.log(studentReport[i]);
+  }  
+}
+
+console.log("While loop");
+let flag = 0
+while(flag < studentReport.length) {
+  if(studentReport[flag] < LIMIT){
+    console.log(studentReport[flag]);
+  }
+flag++;
+}
+
+console.log("forEach loop");
+studentReport.forEach((element)=>{if(element < LIMIT){ console.log(element);}})
+
+console.log("For in loop");
+for (const index in studentReport) {
+  if (studentReport[index] < LIMIT) {
+    console.log(studentReport[index]);  
+  }
+}
+
+const today = new Date();
+for (let i = 0; i <= DAYS; i++) {
+  let nextday = new Date();
+  nextday.setDate(today.getDate() + i);
+  let nextdaystring = new Intl.DateTimeFormat('en-US',{ weekday: 'long'}).format(nextday)
+  console.log(nextdaystring);
+}

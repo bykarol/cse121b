@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSE 121b | Final Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <nav>
+    <ul id="menu">
+      <li><a id="toggleMenu">&equiv;</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="w01-task.html">W1 Task</a></li>
+      <li><a href="w03-task.html">W3 Task</a></li>
+      <li><a href="w04-task.html">W4 Task</a></li>
+      <li><a href="w05-task.html">W5 Task</a></li>
+      <li><a href="project.html" class="active">Project</a></li>
+    </ul>
+  </nav>
+  <main id="gridly">
+    <h1>Final Project</h1>
+    <h2>Fetch(): Rick and Morty API</h2>
+
+    <select id="sortBy" title="Choose a data filter.">
+      <option value="" disabled selected>Filter Characters</option>
+      <option value="human">Human Species</option>
+      <option value="nothuman">Not Human</option>
+      <option value="alive">Alive</option>
+      <option value="notalive">Not alive</option>
+      <option value="female">Females</option>
+      <option value="male">Males</option>
+      <option value="genderunknown">Gender unknown</option>
+      <option value="alphabetically">Sort by Name</option>
+      <option value="all">No Filter</option>
+    </select>
+
+    <div id="characters">
+    </div>
+  </main>
+
+
+  <footer>
+    &copy;<span id="year"></span> | Final Project - Fetching Rick and Morty characters | CSE 121b
+  </footer>
+  <script src="scripts/main.js"></script>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+  <script src="scripts/project.js" type="module"></script>
+</body>
+
+</html>

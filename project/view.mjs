@@ -85,3 +85,11 @@ export const sortBy = async (data)=>{
 const reset = ()=>{
   charactersElement.innerHTML = "";
 }
+
+export const displayInfo = async (data, numPage)=>{
+  let info = await data
+  document.querySelector("#page").textContent = `Page ${numPage}`
+  document.querySelector("#total-pages").textContent = info.pages
+  document.querySelector("#total-characters").textContent = info.count
+
+}

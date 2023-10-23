@@ -1,16 +1,18 @@
 const charactersElement = document.querySelector("#characters");
+import reset from "./helpers.mjs"
 
 /* async displayCharacters Function */
 export async function displayCharacters (data){
+  reset(charactersElement);
   let characters = await data
  characters?.forEach((character)=>{
     let characterHTML = `
     <article>
     <h3>${character.name}</h3>
     <img src="${character.image}" alt="Image of ${character.name}"/>
-    <p>Status: ${character.status}</p>
-    <p>Specie: ${character.species}</p>
-    <p>Gender: ${character.gender}</p>
+    <h4>Status: ${character.status}</h4>
+    <h4>Specie: ${character.species}</h4>
+    <h4>Gender: ${character.gender}</h4>
     </article>`
     charactersElement.innerHTML += characterHTML;
   });
@@ -19,7 +21,7 @@ export async function displayCharacters (data){
 /* sortBy Function */
 export const sortBy = async (data)=>{
   let characters = [...await data]
-  reset();
+  reset(charactersElement);
   const filter = document.querySelector("#sortBy").value;
   let charactersFilteredList;
   switch (filter) {
@@ -79,11 +81,6 @@ export const sortBy = async (data)=>{
     break;
   }
   displayCharacters(charactersFilteredList);
-}
-
-/* reset Function */
-const reset = ()=>{
-  charactersElement.innerHTML = "";
 }
 
 export const displayInfo = async (data, numPage)=>{

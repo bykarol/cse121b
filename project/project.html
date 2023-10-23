@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/main.css">
-  <script src="./controller.js" type="module" defer></script>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./scripts/controller.js" type="module" defer></script>
 </head>
 
 <body>
@@ -27,12 +27,12 @@
   <main id="gridly">
     <h1>Final Project</h1>
     <h2>Fetch(): Rick and Morty API</h2>
-    <div><span id="page">1-20</span> out of <span id="total-pages"></span>
-      <button id="previous">
-        < Previous </button>
-          <button id="next"> Next > </button>
+    <div id="btns-pages"><span id="page"></span> out of <span id="total-pages"></span>
+      <button id="previous" title="previous page">
+        < </button>
+          <button id="next" title="next page"> > </button>
+          <div>Total of characters: <span id="total-characters"></span></div>
     </div>
-    <div>Total of characters: <span id="total-characters"></span></div>
 
     <select id="sortBy" title="Choose a data filter.">
       <option value="" disabled selected>Filter Characters</option>
